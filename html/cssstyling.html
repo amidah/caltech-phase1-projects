@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CSS STYLING</title>
+    <!-- let's apply INTERNAL CSS STYLING -->
+    <style>
+        .container {
+            border: 4px solid black;
+        }
+
+        #div1 {
+            margin-bottom: 5px;
+            background-image: url(bcg-1.png);
+        }
+
+        #div2 {
+            margin-top: 5px;
+            background-image: url(bcg-2.jpeg);
+        }
+    </style>
+
+    <!-- here we are linking the external style sheet in our html doc -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style2.css">
+</head>
+
+<body>
+    <div id="div1" class="container">
+        <!-- within each html tag we are going to use INLINE CSS STYLING -->
+        <h1
+            style="color: aqua; text-align: left; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+            CSS - Cascading Style Sheet</h1>
+        <h2
+            style="color: aquamarine; text-align: center; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+            CSS - Cascading Style Sheet</h2>
+        <h3
+            style="color: black; text-align: right; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+            CSS - Cascading Style Sheet</h3>
+    </div>
+    <div id="div2" class="container">
+        <p style="background-color: cornsilk; font-size: 20px;">CSS stands for Cascading Style Sheet. We can apply CSS
+            properties using three different ways.
+            Inline, Internal, and External are those 3 ways.
+        </p>
+        <p style="background-color: burlywood; font-size: 40px;">
+            CSS stands for Cascading Style Sheet. We can apply CSS properties using three different ways.
+            Inline, Internal, and External are those 3 ways.
+        </p>
+        <p style="background-color: chartreuse; font-size: 60px;">
+            CSS stands for Cascading Style Sheet. We can apply CSS properties using three different ways.
+            Inline, Internal, and External are those 3 ways.
+        </p>
+    </div>
+    <div id="div3" class="container">
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JAVASCRIPT</li>
+        </ul>
+
+        <div>
+            <ul>
+                <li>APPLE</li>
+                <li>BANANA</li>
+                <li>ORANGE</li>
+            </ul>
+        </div>
+
+    </div>
+</body>
+
+</html>

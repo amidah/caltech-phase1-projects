@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Pseudo Class & Elements</title>
+        <style>
+            /* pseudo classes */
+            a:link{
+                color: red;
+            }
+            a:visited{
+                color: green;
+            }
+            a:hover{
+                color:cyan;
+            }
+            a:active{
+                color:darkorange;
+            }
+
+            div > p:first-child{
+                background-color: aquamarine;
+            }
+
+            div > h3:first-child{
+                text-decoration: underline;
+                text-transform: uppercase;
+            }
+            
+            :lang(en){
+                quotes: "“" "”" "‘" "’";
+            }
+
+            :lang(fr){
+                quotes: "“" "”" "‘" "’";    
+            }
+
+            /* pseudo elements */
+            p::first-line{
+                text-decoration: underline;
+                font-weight: bold;
+                font-style: italic;
+            }
+            p::first-letter{
+                font-size: 20px;
+            }
+            p::before{
+                content: url(images/bullet-point.svg);
+            }
+        </style>
+    </head>
+    
+    <body>
+        <h3>Pseudo Class & Elements</h3>
+        <a href="https://lms.simplilearn.com/dashboard">Click Simplilearn Link</a>
+        <br>
+        <a href="https://www.google.com/">Click Google Link</a>
+
+        <div>
+            <p>It is the first paragraph. <br> It is present in the container tag.</p>
+            <p>It is the second paragraph. <br> It is also the second child in the container tag.</p>
+        </div>
+
+        <p>It is the <q lang="en">first child paragraph</q> in the body tag.</p>
+
+        <p>Il s'agit <q lang="fr">du premier paragraphe</q> enfant de la balise body.</p>
+
+        <div>
+            <h3>It is the first heading. It is present in the container tag.</h3>
+            <p>It is the first paragraph. <br> It is also the second child in the container tag.</p>
+        </div>
+    </body>
+</html>
