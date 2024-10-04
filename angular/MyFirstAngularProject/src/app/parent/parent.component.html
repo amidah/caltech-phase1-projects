@@ -1,0 +1,6 @@
+<h2>Parent Component</h2>
+<h1>{{fromChild}}</h1> <!-- here we are dynamically rendering the value of fromChild from parent component class-->
+<app-child [childData] = "message" (customEvent) = "fromChild=$event"></app-child> <!--here we are passing data to the 
+child component and listen for the event emitted from child component-->
+<!--[] => property binding-->
+<!--() => event binding-->

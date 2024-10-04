@@ -1,0 +1,41 @@
+<h1>Welcome {{name}}</h1>
+
+<h1>{{ 'Hello ' + name }}</h1>
+
+<h1>{{ name.length }}</h1>
+
+<h1>{{ name.toUpperCase() }}</h1>
+
+<br>
+<br>
+<div>
+    <h2>Welcome to my APP</h2>
+    <p>Angular is a framework to design front end aaplication</p>
+</div>
+<br>
+<br>
+<button (click)="onClickHandler($event)">Single Click Me</button>
+<br>
+<br>
+<button (dblclick)="onClickHandler($event)">Double Click Me</button>
+
+<br>
+<br>
+
+<button (click)="onLoginHandler()">Login</button>
+
+
+<br>
+<br>
+
+<h1>{{ title }}</h1>
+
+<form [formGroup]="loginForm" (ngSubmit) = "loginUser()">
+    <input type="text" name="name" placeholder="Enter Name"
+   formControlName = "user">
+    <br /> <br />
+    <input type="password" name="password" placeholder="Enter Password"
+   formControlName = "password">
+    <br /> <br />
+    <button>Login</button>
+</form>
