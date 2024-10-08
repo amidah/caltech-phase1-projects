@@ -1,0 +1,7 @@
+<h2>Home Page Product List</h2>
+<ul>
+  <li *ngFor="let product of products">
+    <h3>{{ product.name }} - ${{ product.price }}</h3>
+    <p>{{ product.ratings }}</p>
+  </li>
+</ul>

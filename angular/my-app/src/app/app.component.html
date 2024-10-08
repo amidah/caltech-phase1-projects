@@ -1,0 +1,75 @@
+<h1>{{ title1 }}</h1>
+<p>Template driven refers to an approach where most of the form logic and structure are defined within the template(HTML), rather than the component class.</p>
+<p>Here we are using Angular's built-in directives like ngModel and ngForm directly in the HTML to manage form data and submission.</p>
+<p>ngModel: It automatically binds the input fields to a model (in the component). This enables two-way data binding, so the form fields reflect changes in the model and vice versa.</p>
+<p>ngForm: This directive automatically creates a form group to track the entire form. Angular uses it to monitor the form's state</p>
+
+
+<form #loginForm="ngForm" (ngSubmit)="loginUser(loginForm.value)">
+
+  <input type="text" name="name" placeholder="Enter Name" ngModel>
+  <br /><br />
+
+  <input type="password" name="password" placeholder="Enter Password" ngModel>
+  <br /> <br />
+
+  <button>Login</button>
+
+</form>
+
+<br>
+<br>
+
+<h1>{{ title2 }}</h1>
+
+<p>ngIf , ngFor- structural directive - alter the DOM layout by adding or removing elements from DOM.</p>
+
+<div *ngIf="classes.length > 0">
+  List of Numbers:
+  <ol>
+    <li *ngFor="let i of classes">{{ i }}</li>
+  </ol>
+</div>
+
+<div *ngIf="classes.length == 0">
+  No classes found
+</div>
+
+<p>[ngclass], [ngStyle] -> attribute directive - doesnot alter or change the structure of DOM, rather they change the behavior or an appearance of an existing element</p>
+
+<p>The ngClass directive in Angular is an attribute directive used to dynamically add or remove CSS classes to an HTML element based on some condition or expression.</p>
+
+<p>Toggle Class based on Condition</p>
+
+<div [ngClass]="{'active': isActive, 'inactive': !isActive}"> 
+
+  This div is {{ isActive ? 'Active' : 'Inactive' }}
+
+</div>
+
+<button (click)="toggleActive()">Toggle Button</button>
+
+<br>
+<br>
+
+<h1>{{ title3 }}</h1>
+<p>In Angular, pipes are a powerful feature used to transform data in templates. 
+  They allow you to apply various transformations like formatting, filtering, or modifying data before it's displayed to the user. 
+  Pipes are very useful for tasks like formatting dates, converting text to uppercase/lowercase, transforming numbers into currency formats, and much more.</p>
+
+<br>
+
+<p>{{ hello }}</p>
+<p>{{ hello | uppercase }}</p>
+<p>{{ hello | lowercase }}</p>
+
+<br>
+
+<p>{{ today }}</p>
+<p>{{ today | date }}</p>
+<p>{{ today | date:'fullDate' }}</p>
+
+<br>
+
+<p>{{ currencyNum }}</p>
+<p>{{ currencyNum | currency: 'USD' }}</p>
